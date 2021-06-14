@@ -1,0 +1,3 @@
+Aprendizados da semana
+ 
+ Essa semana foi uma semana super **interessante** pois aprendi alguns comandos para mexer com o **terminal**, aprendi a mexer no **github** e no **vscode**. No primeiro exercício fiquei muito perdida, mas aos poucos vou me encontrando. Ainda estou em processo de aprendizado não sei de muitas coisas, mas acredito que com o tempo vou pegando o jeito de fazer as coisas darem certo. 
