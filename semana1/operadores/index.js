@@ -27,15 +27,18 @@ const soma = primeiroNumero + segundoNumero
 
 console.log(soma)
 
-resposta: Não se usa prompt para somar números. Nada foi impresso no console. */
+resposta: O código não está fazendo a soma pois os valores não são números, mas sim strings.
+Assim sendo, o console.log apenas junta os dois números. */
+
 
 /*questao-3
+let primeiroNumero = prompt("Digite um numero!")
+let segundoNumero = prompt("Digite outro numero!")
 
-const primeiroValor = digite um numero
-const segundoValor = digite outro numero
-const resultado = primeiroValor + segundoValor
+const soma = Number(primeiroNumero) + Number(segundoNumero)
 
-console.log(resultado)*/
+console.log(soma)
+*/
 
 
 /*Exercício de escrita de codigo
@@ -45,64 +48,72 @@ questão-1
 letra a)
 
 
-const idade = prompt("qual a sua idade?")
-
-console.log(resultado)*/
+const minhaIdade = prompt("digite a sua idade")
 
 
+*letra b)
 
-/*letra b)
-
-
-const idadeMelhoramiga = prompt("qual é a sua idade? Larissa")
-
-console.log(idadeMelhoramiga)*/
+const idadeAmigo = prompt("digite a idade do seu melhor amigo")*/
 
 
-/*letra c) false
 
-const minhaIdade = 23
-const idadeMelhoramiga = 24
- 
-const maior = minhaIdade> idadeMelhoramiga
+ /*letra c)
 
-console.log("a minhaidade é maior que a idadeMelhoramiga?", maior)*/
+const comparaIdades = minhaIdade > idadeAmigo
+console.log("Sua idade é maior do que a do seu melhor amigo?", comparaIdades)*/
+
 
 
 /*letra d) 
 
-const minhaIdade = 23
-const idadeMelhoramiga = 24
-
-const resultado = minhaIdade - idadeMelhoramiga
-
-console.log(resultado) -1 */
+const diferencaIdade = minhaIdade - idadeAmigo
+console.log ("diferenca entre as idades:", diferencaIdade)*/
 
 
 /*questão-2
 
 letra a)
 
-const coloqueUmnumeroPar = prompt("insira um número par")
+const numero = prompt("insira um número par")
 
-console.log(numeropar)*/
+)*/
 
  
 
 /*letra b)
 
-const restoDadivisao = 2 % 2
 
-console.log(restoDadivisao) //0  */
+console.log("resto da divisao por 2", Number(numero % 2)) //0  */
 
 
 /*letra c)
 
-Notei que o resto é sempre um número inteiro */
+Notei que o padrão do resto da divisão de um número par por 2 sempre será 0 */
 
 /*letra d)
 
-Acontece que o resto da divisão é inteiro também, como no resto da divisão dos números pares */
+Quando o número ímpar é inserido o resto da divisão dele por 2 é sempre 1 */
+
+
+/* questão-3
+
+const idade = Number(prompt("digite sua idade")
+
+console.log("a. idade em meses", idade*12
+console.log("b. iadde em dias", idade*365)
+console.log("c. idade em horas", idade*365*24)
+
+
+questão-4
+
+const num1 = Number(prompt("digite um número"))
+const num2 = Number(prompt("digite outro número"))
+
+console.log("O primeiro numero é maior que segundo?", num1 > num2) true
+console.log("O primeiro numero é igual ao segundo?", num1 === num2) false
+console.log("O primeiro numero é divisível pelo segundo?"", num1%num2 === 0) true
+console.log("O segundo numero é divisível pelo primeiro?", num2%num1 ===0) false
+
 
 
 
