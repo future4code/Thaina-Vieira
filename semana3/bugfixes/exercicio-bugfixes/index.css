@@ -75,8 +75,8 @@ div img {
 
 #container-de-descricao>ol {
     padding: 15px 0px;
-   
 }
+   
 
 #container-para-comprar {
     background-color: #e7eb90;
@@ -104,6 +104,7 @@ table {
     width: 60%;
 }
 
+
 td button {
     background-color: #fadf63;
     width: 150px;
@@ -115,7 +116,7 @@ td button {
 .container-do-search {
     margin-top: 20px;
     height: 100px;
-}
+}   
 
 
 #back-button {
@@ -131,3 +132,8 @@ td button {
 #back-button:hover {
     background-color: #635a3d
 }
+
+img {
+    width: 30px;
+}
+
