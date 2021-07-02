@@ -1,0 +1,25 @@
+```
+function calculaNota(ex, p1, p2) {
+  // Escreva seu código aqui
+  let conceito
+  const media = ((1*ex) + (2*p1) + (3*p2))/ (1 + 2 + 3)
+  
+    if(media >= 9){
+      let conceito = "A"
+      return conceito
+      
+    }else if(media <9 && media >= 7.5)
+    let conceito = "B" 
+    return conceito
+    
+     }else if(media <7.5 && media >= 7.5)
+  let conceito = "C" 
+  return conceito
+  
+     }else{
+  let conceito = "D" 
+  return conceito
+
+
+console.log(calculaNota())
+```
