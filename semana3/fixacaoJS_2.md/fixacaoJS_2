@@ -1,0 +1,12 @@
+```
+function calculaPrecoTotal(quantidade) {
+  // Escreva seu código aqui
+  let precoMaca
+  if(quantidade > 1 && quantidade < 12){
+    precoMaca = quantidade * 1.30
+  }else if (quantidade >= 12){
+    precoMaca = quantidade * 1.00
+  }
+  return precoMaca
+}
+```
