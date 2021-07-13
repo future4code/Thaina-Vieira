@@ -4,9 +4,9 @@ import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
 import euImagem from './eu.png';
 import atendenteImagem from './atendente.jpg'
-import CardPequeno from './components/CardPequeno.js/CardPequeno';
+import CardPequeno from './components/CardPequeno/CardPequeno.js';
 import email from './iconeemail.jpg';
-import endereco from './iconeendereco.jpg';
+import endereco from './iconecasinhaa.jpg';
 
 
 
@@ -36,7 +36,7 @@ function App() {
         
         <CardPequeno 
           imagem={endereco}
-          nome="Endereço" 
+          nome="Endereço"  
           descricao="Rua Goiás" 
         />
       </div>
