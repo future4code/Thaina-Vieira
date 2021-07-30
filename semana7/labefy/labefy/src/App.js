@@ -7,16 +7,17 @@ import ListaPlaylist from "./components/ListaPlaylist"
 export default class App extends React.Component{
   state = {
     telaAtual: "cria playlist"
+   
   }
 
   escolheTela = () =>{
     switch(this.state.telaAtual){
       case "cria playlist":
-        return <CriaPlaylist/>
-        case "lista":
-          return <ListaPlaylist/>
-          default:
-            return <div>Erro! Página não encontrada</div>
+        return <CriaPlaylist irListaPlaylist={this.irListaPlaylist} />
+      case "lista":
+        return <ListaPlaylist paginaPlaylist={this.paginaPlaylist} />
+      default:
+        return <div>Erro! Página não encontrada</div>
 
     }
   }
@@ -34,7 +35,9 @@ export default class App extends React.Component{
     return(
      <div>
         <h1>Labefy</h1>
-        <div>{this.escolheTela()}</div>
+        <div>
+          {this.escolheTela()}
+          </div>
      </div>
     )
   }
