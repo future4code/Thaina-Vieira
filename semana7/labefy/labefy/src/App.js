@@ -1,8 +1,7 @@
 import React from "react"
-import styled from "styled-components"
-import axios from "axios"
 import CriaPlaylist from "./components/CriaPlaylist"
 import ListaPlaylist from "./components/ListaPlaylist"
+
 
 export default class App extends React.Component{
   state = {
@@ -33,14 +32,12 @@ export default class App extends React.Component{
 
   render(){
     return(
-     <div>
+      <div>
         <h1>Labefy</h1>
         <div>
-          {this.escolheTela()}
-          </div>
-     </div>
+       {this.escolheTela()}
+      </div>
+      </div>
     )
   }
 }
-
-
