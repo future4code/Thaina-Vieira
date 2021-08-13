@@ -1,6 +1,9 @@
 import styled from "styled-components"
 
 
+
+
+
 export const HomeContainer = styled.div`
   display: flex;
   align-items: center;
@@ -22,12 +25,3 @@ export const Perfil = styled.div`
 export const ImagemPerfil = styled.img`
   width: 400px;
 `
-// const PageInicial = styled.div`
-//  border: 1px solid black;
-//  width: 300px;
-//  height: 300px;
-//  display: flex;
-//  justify-content: center;
-//  flex-direction: column;
-
-// `

@@ -1,54 +1,59 @@
 import React, { useEffect, useState } from "react"
-import { HomeContainer, Perfil, ImagemPerfil } from "./styled"
+import { HomeContainer, GlobalStyle,Perfil, ImagemPerfil } from "./styled"
 import axios from "axios"
 
-export const PaginaInicial = () =>{
+
+export const PaginaInicial = () => {
     const [perfil, setPerfil] = useState({})
 
     const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/thaina-rodrigues-vieira-lovelace/person"
 
-    useEffect (() => {
+    useEffect(() => {
         pegarPerfil()
     }, [])
-    const pegarPerfil = () =>{
+    const pegarPerfil = () => {
         axios.get(url)
-        .then((res) =>{
-            setPerfil(res.data.profile)
-        })
-        .catch((err) =>{
-            console.log(err.response)
-        })
+            .then((res) => {
+                setPerfil(res.data.profile)
+
+            })
+            .catch((err) => {
+                console.log(err.response)
+            })
 
     }
-    
-const body ={
-    
-        "id": "",
+
+    const body = {
+
+        "id": perfil.id,
         "choice": true
-    
-}
-    const escolhePessoa =() =>{
+
+    }
+    const escolhePessoa = () => {
         axios.post(url, body, {
-            headers:{
+            headers: {
                 'Content-Type': 'application/json'
             }
         })
-           
-        .then((res) =>{
-            console.log(res.data)
-        })
-        .catch((err) =>{
-            console.log(err.response)
-        })
-        
+
+            .then((res) => {
+                console.log(res.data.profile)
+
+            })
+            .catch((err) => {
+                console.log(err.response)
+            })
+
 
     }
 
 
-    return(
-        <HomeContainer>
+    return (
+
+        
+            <HomeContainer>
             <Perfil>
-                <ImagemPerfil src={perfil.photo}/>
+                <ImagemPerfil src={perfil.photo} />
                 <h2>{perfil.name}, {perfil.age}</h2>
                 <p>{perfil.bio}</p>
                 <div>
@@ -56,6 +61,11 @@ const body ={
                     <button onClick={escolhePessoa}>💚</button>
                 </div>
             </Perfil>
-        </HomeContainer>
+            </HomeContainer>
+
+        
+        
     )
 }
+
+
