@@ -1,6 +1,7 @@
 import React from "react"
 
 export const CreateTripPage = () =>{
+    
     return(
         <div>
             <h1>Criar Viagem</h1>

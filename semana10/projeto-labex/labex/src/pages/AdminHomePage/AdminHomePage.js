@@ -1,5 +1,6 @@
 import React from "react"
 import { useHistory } from "react-router"
+import { goToHomePage } from "../../route/coordinator";
 
 export const AdminHomePage = () =>{
     const history= useHistory();
@@ -8,15 +9,17 @@ export const AdminHomePage = () =>{
         history.push("/admin/trips/create")
     }
     const goToTripDetailsPage = () =>{
-        history.push("/admin/trips/:id")
+        history.push("/admin/trips/NoIFVcOiSgTKTIPVZwXS")
     }
 
     return(
         <div>
             <h1>Painel Adminstrativo</h1>
-            <button>Voltar</button>
+            <button onClick={() => goToHomePage(history)}>Voltar</button>
             <button onClick={goToCreateTripPage}>Criar Viagem</button>
             <button>Logout</button>
+
+           {goToTripDetailsPage}
 
             
         </div>
