@@ -3,6 +3,7 @@ import axios from "axios"
 import { useHistory } from "react-router"
 import { useEffect } from "react";
 import { goToHomePage } from "../../route/coordinator";
+import { AdminPage } from "./styled";
 
 export const AdminHomePage = () => {
     const history = useHistory();
@@ -30,7 +31,7 @@ export const AdminHomePage = () => {
     // }
 
     return (
-        <div>
+        <AdminPage>
             <h1>Painel Adminstrativo</h1>
             <button onClick={() => goToHomePage(history)}>Voltar</button>
             <button onClick={goToCreateTripPage}>Criar Viagem</button>
@@ -39,6 +40,6 @@ export const AdminHomePage = () => {
             {/* {goToTripDetailsPage} */}
 
 
-        </div>
+        </AdminPage>
     )
 }

@@ -1,5 +1,7 @@
 import React from "react"
 import { useHistory} from "react-router-dom"
+import { goToHomePage } from "../../route/coordinator";
+import { ListTrip } from "./styled";
 
 
 export const ListTripsPage = () =>{
@@ -9,11 +11,11 @@ export const ListTripsPage = () =>{
         history.push("/trips/application")
     }
     return(
-       <div>
-            <button>Voltar</button>
+       <ListTrip>
+            <button onClick={() => goToHomePage(history)}>Voltar</button>
             <button onClick={goToApplicationFormPage}>Inscrever-se</button>
             <h1>Lista De Viagens</h1>
-       </div>
+       </ListTrip>
     )
 
 }

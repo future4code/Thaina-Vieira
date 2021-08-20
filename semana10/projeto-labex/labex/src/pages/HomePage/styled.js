@@ -9,6 +9,7 @@ export const PaginaInicial = styled.div`
   justify-content: center;
 
    h1{
+     
      margin: 40px;
      display: flex;
      justify-content: center;
