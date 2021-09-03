@@ -1,31 +1,45 @@
 import React from "react"
 import useProtectedPage from "../../hooks/useProtectedPage"
 import RecipeCard from "../../components/RecipeCard/RecipeCard"
-import {RecipeListContainer} from "./styled"
+import { RecipeListContainer, AddRecipeButton } from "./styled"
 import useRequestData from "../../hooks/useRequestData"
 import { BASE_URL } from "../../constants/urls"
+import { goToAddRecipes } from "../../routes/Coordinator"
+import { useHistory } from "react-router"
+import { Add } from "@material-ui/icons"
 
 
 const RecipesListPage = () => {
     useProtectedPage()
+    const history = useHistory()
     const recipes = useRequestData([], `${BASE_URL}/recipe/feed`)
-    console.log(recipes)
+    
+    const onClickCard = () =>{
+
+    }
 
     const recipeCards = recipes.map((recipe) => {
         return (
             <RecipeCard
-            title={recipe.title}
-            image={recipe.image}
-            onClick={() => null}
+                key={recipe.recipe_id}
+                title={recipe.title}
+                image={recipe.image}
+                onClick={onClickCard}
             />
         )
 
     })
-    
+
     return (
-        <div>
+        <RecipeListContainer>
             {recipeCards}
-        </div>
+            <AddRecipeButton
+                color={"primary"}
+                onClick={() => goToAddRecipes(history)}
+            >
+             <Add/>
+            </AddRecipeButton>
+        </RecipeListContainer>
     )
 }
 
