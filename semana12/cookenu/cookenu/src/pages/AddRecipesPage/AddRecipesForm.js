@@ -1,31 +1,29 @@
 import React, {useState} from 'react'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
-import { InputsContainer, SignUpFormContainer } from './styled'
-import { useHistory } from 'react-router-dom'
+import { InputsContainer, AddRecipeFormContainer } from './styled'
 import useForm from '../../hooks/useForm'
-import {signUp} from "../../services/user"
+import {createRecipe} from "../../services/recipe"
 import CircularProgress from '@material-ui/core/CircularProgress'
 
-const SignUpForm = ({setRightButtonText}) => {
-  const history = useHistory()
-  const [form, onChange, clear] = useForm({ name: '', email: '', password: '' })
+const AddRecipeForm = () => {
+  const [form, onChange, clear] = useForm({ title: "", description: "", image: "" })
   const [isLoading, setIsLoading] = useState(false)
 
   const onSubmitForm = (event) => {
     event.preventDefault()
-    signUp(form, clear, history, setRightButtonText, setIsLoading)
+    createRecipe(form, clear, setIsLoading)
   }
 
   return (
     <form onSubmit={onSubmitForm}>
-      <SignUpFormContainer>
+      <AddRecipeFormContainer>
         <InputsContainer>
           <TextField
-            value={form.name}
-            name={'name'}
+            name={"title"}
+            value={form.title}
             onChange={onChange}
-            label={'Nome'}
+            label={'Título'}
             variant={'outlined'}
             fullWidth
             required
@@ -33,23 +31,21 @@ const SignUpForm = ({setRightButtonText}) => {
             margin={'normal'}
           />
           <TextField
-            value={form.email}
-            name={'email'}
+            name={"description"}
+            value={form.description}
             onChange={onChange}
-            label={'E-mail'}
+            label={'Descrição'}
             variant={'outlined'}
-            type={'email'}
             fullWidth
             required
             margin={'normal'}
           />
           <TextField
-            value={form.password}
-            name={'password'}
+            name={"image"}
+            value={form.image}
             onChange={onChange}
-            label={'Senha'}
+            label={'Foto'}
             variant={'outlined'}
-            type={'password'}
             fullWidth
             required
             margin={'normal'}
@@ -61,11 +57,11 @@ const SignUpForm = ({setRightButtonText}) => {
           type={'submit'}
           fullWidth
         >
-          {isLoading ? <CircularProgress color={"inherit"} size={24}/> : <>Fazer Cadastro</>}
+          {isLoading ? <CircularProgress color={"inherit"} size={24}/> : <>Adicionar Receita</>}
         </Button>
-      </SignUpFormContainer>
+      </AddRecipeFormContainer>
     </form>
   )
 }
 
-export default SignUpForm
+export default AddRecipeForm

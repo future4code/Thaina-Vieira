@@ -28,7 +28,7 @@ const Router = ({setRightButtonText}) => {
                     <AddRecipesPage />
                 </Route>
 
-                <Route exact path="/detalhe/id:">
+                <Route exact path="/detalhe/:id">
                     <RecipeDetailPage />
                 </Route>
 
