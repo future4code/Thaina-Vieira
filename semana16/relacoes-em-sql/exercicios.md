@@ -1,11 +1,11 @@
 ### Exercicio 1
 ```
 a)
-```
 Identifica um valor que está em outra tabela.
 ```
-b)
+
 ```
+b)
 CREATE TABLE Rating (
 		id VARCHAR(255) PRIMARY KEY,
     comment TEXT NOT NULL,
@@ -23,15 +23,19 @@ VALUES (
 SELECT * FROM Rating;
 ```
 
-c)
 ```
+
+c)
 Error Code: 1452. Cannot add or update a child row: a foreign key constraint fails (`lovelace-2147751-thaina-vieira`.`Rating`, CONSTRAINT `Rating_ibfk_1` FOREIGN KEY (`movie_id`) REFERENCES `Movie` (`id`)). Código de erro: 1452. Não é possível adicionar ou atualizar uma linha filha: uma restrição de chave estrangeira falha (`lovelace-2147751-thaina-vieira`.`Rating`, CONSTRAINT` Rating_ibfk_1` FOREIGN KEY (`movie_id`) REFERÊNCIAS` Movie` (` id`))
 ```
 
-d)
 ```
+
+d)
 ALTER TABLE Movie
 DROP COLUMN rating;
+```
+
 
 ```
 e)
