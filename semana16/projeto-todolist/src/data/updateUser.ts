@@ -1,3 +1,5 @@
+import { connection } from ".."
+
 export default async function updateUser(
     id: string,
     name?: string,

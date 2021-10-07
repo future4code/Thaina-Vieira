@@ -14,8 +14,8 @@ export default async function createUser(req: Request, res: Response) {
         const id: string = Date.now() +  Math.random().toString()
         await insertUser(
             id,
-            req.body.name 
-            req.body.nickname 
+            req.body.name, 
+            req.body.nickname,
             req.body.email
         )
         res.status(200).send('Usuario criado com sucesso')

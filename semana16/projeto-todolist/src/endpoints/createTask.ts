@@ -12,7 +12,7 @@ export default async function createTask (
             !req.body.title ||
             !req.body.description ||
             !req.body.deadline ||
-            !req.body.authorId ||
+            !req.body.authorId 
         ){
             res.status(400).send({message: '"title", "description", "deadline" e "authorId" sao obrigatorios'})
             return
