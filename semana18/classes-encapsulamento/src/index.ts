@@ -1,27 +1,22 @@
-// 1)
-// a)Para chamar o construtor usa o this
+// 2)
+// class Transaction {
+//     private date: string;
+//     private value: number;
+//     private description: string;
+    
+//     constructor(date: string, value: number, description: string) {
+//       this.date = date;
+//       this.value = value;
+//       this.description = description
+//     }
+//   }
 
-// b)
-// class UserAccount {
-//     private cpf: string;
-//     private name: string;
-//     private age: number;
-//     private balance: number = 0;
-//     private transactions: Transaction[] = [];
+// 3)
+// class Bank {
+//     private accounts: UserAccount[];
   
-//     constructor(
-//        cpf: string,
-//        name: string,
-//        age: number,
-//     ) {
-//        console.log("Chamando o construtor da classe UserAccount")
-//        this.cpf = cpf;
-//        this.name = name;
-//        this.age = age;
+//     constructor(accounts: UserAccount[]) {
+//       this.accounts = accounts;
 //     }
   
 //   }
-
-const novaConta: UserAccount = new UserAccount("5555555555", "Bruna", 25)
-
-// c) Variáveis privadas só podem ser acessadas de dentro da própria classe, usando a keyword this
