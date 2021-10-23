@@ -1,7 +1,7 @@
 import app from "./app"
-import generateId from "./services/idGenerator"
+import login from "./endpoints/users/login"
+import signup from "./endpoints/users/signup"
 
+app.post("/users/signup", signup)
+app.post("/users/login", login)
 
-app.get("/")
-
-console.log(generateId())

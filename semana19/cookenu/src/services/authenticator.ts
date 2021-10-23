@@ -20,6 +20,7 @@ export const getTokenData = (
     try {
         const {id} = verify(token, JWT_KEY!) as authenticationData
         return {id}
+
       }  catch (error) {
         return null
         
