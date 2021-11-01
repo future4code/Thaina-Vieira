@@ -1,0 +1,8 @@
+node_modules
+.env
+build
+package-lock.json
+
+BCRYPT_COST = 12
+
+JWT_KEY = 1586364712365874ASDTYUJMLKJHVCasdfghn+*+//-[]-
